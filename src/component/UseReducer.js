@@ -34,6 +34,7 @@ const UseReducer = () => {
     </div>
       <input
         type="text"
+        placeholder="useReducer"
         value={state.name}
         onChange={(e) =>
           dispatch({ type: "SET_NAME", payload: e.target.value })

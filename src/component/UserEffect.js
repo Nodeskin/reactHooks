@@ -12,7 +12,6 @@ const UserEffect = () => {
     }, 5000);
 
     return () => {
-      console.log("clear");
       clearTimeout(Timer);
     
     };

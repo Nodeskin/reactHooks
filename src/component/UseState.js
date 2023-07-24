@@ -12,7 +12,7 @@ function NameList() {
       <ul>
         {list.map((name)=>(<li key={name}>{name}</li>))}
       </ul>
-    <input type='text' value={name} onChange={(e)=>setName(e.target.value)}/>
+    <input type='text' placeholder="useState" value={name} onChange={(e)=>setName(e.target.value)}/>
     <button onClick={onAddName}> Add Name </button>
     </div>
   )
