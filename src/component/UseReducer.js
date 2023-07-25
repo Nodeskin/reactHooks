@@ -1,6 +1,42 @@
 import React, { useReducer } from "react";
 
-const UseReducer = () => {
+export const UserForm = ()=>{
+
+   const [state, dispatch] = useReducer((state, action)=>{
+    return ({
+      ...state,
+      ...action 
+    })
+   }, {
+      first: "",
+      last: "", 
+    })
+
+
+        return(
+          <div>
+            <h1>Start</h1>
+            <input type="text" 
+            value= {state.first}
+            onChange={(e)=> dispatch({first:e.target.value})} />
+            <input type="text" 
+            value= {state.last}
+            onChange={(e)=> dispatch({last:e.target.value})} />
+          
+          <div>
+            First: {state.first}
+          </div>
+          <div>
+            Last: {state.last}
+          </div>
+
+          </div>
+        );
+}
+
+
+
+const ListOfNames = () => {
   const [state, dispatch] = useReducer(
     (state, action) => {
       switch (action.type) {
@@ -13,10 +49,7 @@ const UseReducer = () => {
                  names: [...state.names, state.name], 
                  name: "",
                 
-            };
-            
-
-
+            };           
       }
     },
     {
@@ -47,4 +80,4 @@ const UseReducer = () => {
   );
 };
 
-export default UseReducer;
+export default ListOfNames;
