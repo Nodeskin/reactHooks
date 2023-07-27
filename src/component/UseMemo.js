@@ -7,6 +7,7 @@ const UseMemo = () => {
 
 const [names] = useState(["John", "Paul", "George", "Ringo"]);
 const sortedNames = [...names].sort()
+        console.log(names)
   return (
     <div>
         <div> Total: {total} </div>

@@ -1,4 +1,5 @@
 import './App.css';
+import Test from './component/Test';
 import UseMemo from './component/UseMemo';
 import ListOfNames, { UserForm } from './component/UseReducer';
 import NameList from "./component/UseState";
@@ -8,10 +9,11 @@ function App() {
   return (
     <div className="App">
       {/* <NameList/> */}
-      {/* <UserEffect/> */}
+      <UserEffect/>
       {/* <UserForm/> */}
       {/* <ListOfNames/> */}
-      <UseMemo/>
+      {/* <UseMemo/> */}
+      {/* <Test/> */}
     </div>
   );
 }
